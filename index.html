@@ -2,18 +2,51 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ENQDFLNFM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-4ENQDFLNFM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-4ENQDFLNFM');
-</script>
+      gtag('config', 'G-4ENQDFLNFM');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Fitness Tracker</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Inline critical CSS -->
+    <style>
+        body, h1, h2, p, a {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        .hero-section {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .btn {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+
+    <!-- Async loading of non-critical CSS -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
     <header>
@@ -85,11 +118,12 @@
         </div>
     </section>
 
+    <!-- Lazy-load images -->
     <footer>
         <p>&copy; 2024 FitTrack. All rights reserved.</p>
     </footer>
+
+    <!-- Defer non-critical JavaScript -->
+    <script defer src="script.js"></script>
 </body>
 </html>
-
-
-
